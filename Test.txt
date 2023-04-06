@@ -1,2 +1,3 @@
 dodaje dwie linijki
 cos
+trzecia linijka
