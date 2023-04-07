@@ -1,5 +1,5 @@
 void main() {
-  int age; //variable integer
-  age = 22;
-  print(age);
+  int age; //define integer variable
+  age = 22; //initialising integer variable
+  print(age); //print age value in console
 }
