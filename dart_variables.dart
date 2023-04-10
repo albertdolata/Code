@@ -21,4 +21,8 @@ void main() {
   //initialising and print dynamicVariable as integer
   dynamicVariable = 10;
   print(dynamicVariable);
+
+  //change dynamicVariable to String type and print
+  dynamicVariable = 'I am String now';
+  print(dynamicVariable)
 }
