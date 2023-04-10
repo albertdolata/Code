@@ -14,6 +14,8 @@ void main() {
   //define and initialising boolean variable
   bool booleanVariable = true;
 
+  print('Boolean variable is equal $booleanVariable');
+
   //define dynamic variable
   dynamic dynamicVariable;
 
