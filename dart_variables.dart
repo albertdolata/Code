@@ -20,9 +20,9 @@ void main() {
 
   //initialising and print dynamicVariable as integer
   dynamicVariable = 10;
-  print(dynamicVariable);
+  print('I am integer that equals $dynamicVariable');
 
   //change dynamicVariable to String type and print
   dynamicVariable = 'I am String now';
-  print(dynamicVariable)
+  print(dynamicVariable);
 }
