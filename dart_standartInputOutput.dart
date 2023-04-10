@@ -13,4 +13,7 @@ void main(){
 
     //asking user for a name
     print('And what is your name?');
+
+    //taking String input from user
+    String? name = stdin.readLineSync();
 }
