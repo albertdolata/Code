@@ -13,4 +13,7 @@ void main() {
 
   //define and initialising boolean variable
   bool booleanVariable = true;
+
+  //define dynamic variable
+  dynamic dynamicVariable;
 }
