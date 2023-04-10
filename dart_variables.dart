@@ -9,5 +9,8 @@ void main() {
     use '$' to interpolate double variable to string
   */
   String balance_string = "Account balance: $balance PLN";
-  print(balance_string); //print account balance in console
+  print(balance_string); //print account balance in console;
+
+  //define and initialising boolean variable
+  bool booleanVariable = true;
 }
