@@ -16,4 +16,9 @@ void main() {
 
   //define dynamic variable
   dynamic dynamicVariable;
+
+
+  //initialising and print dynamicVariable as integer
+  dynamicVariable = 10;
+  print(dynamicVariable);
 }
