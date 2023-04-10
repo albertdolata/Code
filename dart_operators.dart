@@ -38,4 +38,9 @@ void main(){
     print('Bitwise operation NOT on a ${~a} and b ${~b}  ');
     print('Bitwise operation left shift on a ${a << b}  ');
     print('Bitwise operation right shift on a ${a >> b}  ');
+
+    //use of logical operators
+    print('Is a and b greather than 100? Answer: ${a>100 && b>100}' );
+    print('Is a or b greather than 100? Answer: ${a>100 || b>100}' );
+    print('Is a smaller (using not operator) than 100? Answer: ${!(a>100)}' );
 }
