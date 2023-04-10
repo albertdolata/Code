@@ -27,7 +27,15 @@ void main(){
     print('a is not equal to b is ${a!=b}');
 
     //use of test type operators
-    print('Is a a double? Answer: ${a is double}  ');
+    print('Is b a double? Answer: ${b is double}  ');
     print('Is a a String? Answer: ${a is String}  ');
     print('a is not an String? Answer: ${a is! String}  ');
+
+    //use of bitwise operators
+    print('Bitwise operation AND on a and b ${a & b}  ');
+    print('Bitwise operation OR on a and b ${a | b}  ');
+    print('Bitwise operation XOR on a and b ${a ^ b}  ');
+    print('Bitwise operation NOT on a ${~a} and b ${~b}  ');
+    print('Bitwise operation left shift on a ${a << b}  ');
+    print('Bitwise operation right shift on a ${a >> b}  ');
 }
