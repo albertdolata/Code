@@ -40,7 +40,11 @@ void main(){
     print('Bitwise operation right shift on a ${a >> b}  ');
 
     //use of logical operators
-    print('Is a and b greather than 100? Answer: ${a>100 && b>100}' );
-    print('Is a or b greather than 100? Answer: ${a>100 || b>100}' );
+    print('Is a and b greater than 10? Answer: ${a>10 && b>10}' );
+    print('Is a or b greater than 10? Answer: ${a>10 || b>10}' );
     print('Is a smaller (using not operator) than 100? Answer: ${!(a>100)}' );
+
+    //use of conditional operators
+    var c = (a>10) ? "It is Correct" : "It is wrong";
+    print('Is a grater than 10 $c');
 }
