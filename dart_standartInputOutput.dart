@@ -18,5 +18,5 @@ void main(){
     String? name = stdin.readLineSync();
     
     //creating output by using stdout.write() statement
-    stdout.write('So, your name is $name and you are $age years old. ')
+    stdout.write('So, your name is $name and you are $age years old. ');
 }
