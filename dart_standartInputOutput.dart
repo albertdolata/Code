@@ -8,7 +8,7 @@ void main(){
     //taking int input from user
     int? age = int.parse(stdin.readLineSync()!);
 
-    //creating output by using print() function
+    //creating output by using print() statement
     print('Now I know that your age is $age');
 
     //asking user for a name
@@ -16,4 +16,7 @@ void main(){
 
     //taking String input from user
     String? name = stdin.readLineSync();
+    
+    //creating output by using stdout.write() statement
+    stdout.write('So, your name is $name and you are $age years old. ')
 }
