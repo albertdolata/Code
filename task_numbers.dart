@@ -10,7 +10,7 @@ void main(){
     int tempMemory = int.parse(stringOfNumbers[i]);
     if( tempMemory % 2 == 0 ){
       evenNumbers += '$tempMemory ';
-      additionOfEvenNumbers +='+$tempMemory ';
+      additionOfEvenNumbers +='+$tempMemory';
       sumOfEvenNumbers += tempMemory;
     }else{
       oddNumbers += '$tempMemory ';
@@ -19,7 +19,7 @@ void main(){
     }
   }
   print('Even numbers:$evenNumbers');
-  print('Sum of even number: ${additionOfEvenNumbers.substring(1)}=$sumOfEvenNumbers');
+  print('Sum of even number:${additionOfEvenNumbers.substring(1)}=$sumOfEvenNumbers');
   print('Odd numbers:$oddNumbers');
-  print('Sum of odd numbers: ${additionOfOddNumbers.substring(1)}=$sumOfOddNumbers');
+  print('Sum of odd numbers:${additionOfOddNumbers.substring(1)}=$sumOfOddNumbers');
 }
