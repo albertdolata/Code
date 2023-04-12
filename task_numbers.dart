@@ -40,3 +40,11 @@ String addEvenNumbers(int number, String evenNumbers) {
   }
   return '';
 }
+
+String addOddNumbers(int number, String oddNumbers){
+  if(!isNumberEven(number)){
+    oddNumbers += '$number';
+    return oddNumbers;
+  }
+  return '';
+}
