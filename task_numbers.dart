@@ -7,9 +7,8 @@ void main() {
       additionOfEvenNumbers = '',
       additionOfOddNumbers = '';
   int sumOfEvenNumbers = 0, sumOfOddNumbers = 0;
-  int length = stringOfNumbers.length;
-  for (int i = 0; i < length; i++) {
-    int tempMemory = int.parse(stringOfNumbers[i]);
+  for (int i = 0; i < userNumbers.length; i++) {
+    int tempMemory = int.parse(userNumbers[i]);
     if (tempMemory % 2 == 0) {
       evenNumbers += '$tempMemory ';
       additionOfEvenNumbers += '+$tempMemory';
