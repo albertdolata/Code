@@ -9,16 +9,18 @@ void main() {
   int sumOfEvenNumbers = 0, sumOfOddNumbers = 0;
   for (int i = 0; i < userNumbers.length; i++) {
     int singleNumber = int.parse(userNumbers[i]);
-    if (isEven(singleNumber)) {
-      evenNumbers += '$singleNumber ';
-      additionOfEvenNumbers += '+$singleNumber';
-      sumOfEvenNumbers += singleNumber;
-    } else {
-      oddNumbers += '$singleNumber ';
-      additionOfOddNumbers += '+$singleNumber';
-      sumOfOddNumbers += singleNumber;
-    }
-  }
+    isEven(singleNumber);
+    evenNumbers = '${setEvenNumbers(singleNumber, evenNumbers)}';
+  //   if (isEven(singleNumber)) {
+  //     evenNumbers += '$singleNumber ';
+  //     additionOfEvenNumbers += '+$singleNumber';
+  //     sumOfEvenNumbers += singleNumber;
+  //   } else {
+  //     oddNumbers += '$singleNumber ';
+  //     additionOfOddNumbers += '+$singleNumber';
+  //     sumOfOddNumbers += singleNumber;
+  //   }
+   }
   printOutput(evenNumbers, oddNumbers, additionOfEvenNumbers,
       additionOfOddNumbers, sumOfEvenNumbers, sumOfOddNumbers);
 }
@@ -34,12 +36,11 @@ bool isEven(int number) {
   return number % 2 == 0;
 }
 
-int addEvenNumbers(int number, int evenNumbers) {
+String setEvenNumbers(int number, String even) {
   if (isEven(number)) {
-    evenNumbers += number;
-    return evenNumbers;
+    even += ' $number';
   }
-  return 0;
+  return even;
 }
 
 int addOddNumbers(int number, int oddNumbers){
