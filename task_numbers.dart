@@ -2,33 +2,11 @@ import 'dart:io';
 
 void main() {
   String userNumbers = getNumbers();
-  String evenNumbers = '',
-      oddNumbers = '',
-      additionOfEvenNumbers = '',
-      additionOfOddNumbers = '';
-  int sumOfEvenNumbers = 0, sumOfOddNumbers = 0;
-  for (int i = 0; i < userNumbers.length; i++) {
-    int singleNumber = int.parse(userNumbers[i]);
-    isEven(singleNumber);
-    evenNumbers = '${setEvenNumbers(singleNumber, evenNumbers)}';
-    oddNumbers = '${setOddNumbers(singleNumber, oddNumbers)}';
-    additionOfEvenNumbers = '${additionEvenNumbers(singleNumber, additionOfEvenNumbers)}';
-    additionOfOddNumbers = '${additionOddNumbers(singleNumber, additionOfOddNumbers)}';
-  //   if (isEven(singleNumber)) {
-  //     evenNumbers += '$singleNumber ';
-  //     additionOfEvenNumbers += '+$singleNumber';
-  //     sumOfEvenNumbers += singleNumber;
-  //   } else {
-  //     oddNumbers += '$singleNumber ';
-  //     additionOfOddNumbers += '+$singleNumber';
-  //     sumOfOddNumbers += singleNumber;
-  //   }
-   }
-  printOutput(evenNumbers, oddNumbers, additionOfEvenNumbers,
-      additionOfOddNumbers, sumOfEvenNumbers, sumOfOddNumbers);
+  String sortedNumbers = '${sort(userNumbers)}';
+  print(sortedNumbers);
 }
 
-String getNumbers(){
+String getNumbers() {
   print('Enter numbers');
   String userNumbers = stdin.readLineSync() ?? '';
 
@@ -46,32 +24,70 @@ String setEvenNumbers(int number, String even) {
   return even;
 }
 
-String setOddNumbers(int number, String odd){
-  if(!isEven(number)){
+String setOddNumbers(int number, String odd) {
+  if (!isEven(number)) {
     odd += ' $number';
   }
   return odd;
 }
 
-String additionEvenNumbers(int number, String additionOfEvenNumbers){
-  if(isEven(number)){
+String additionEvenNumbers(int number, String additionOfEvenNumbers) {
+  if (isEven(number)) {
     additionOfEvenNumbers += '+$number';
   }
   return additionOfEvenNumbers;
 }
 
-String additionOddNumbers(int number, String additionOfOddNumbers){
-  if(!isEven(number)){
+String additionOddNumbers(int number, String additionOfOddNumbers) {
+  if (!isEven(number)) {
     additionOfOddNumbers += '+$number';
   }
   return additionOfOddNumbers;
 }
 
-void printOutput(String evenNumbers, String oddNumbers, String additionOfEvenNumbers,
-    String additionOfOddNumbers, int sumOfEvenNumbers, int sumOfOddNumbers) {
-  print('Even numbers:$evenNumbers'
-      '\nSum of even number:${additionOfEvenNumbers.substring(1)}=$sumOfEvenNumbers'
+int sumEvenNumbers(int number, int sum) {
+  if (isEven(number)) {
+    sum += number;
+  }
+  return sum;
+}
+
+int sumOddNumbers(int number, int sum) {
+  if (!isEven(number)) {
+    sum += number;
+  }
+  return sum;
+}
+
+String toPrint(String evenNumbers, String additionOfEvenNumbers, int sumEven,
+    String oddNumbers, String additionOfOddNumbers, int sumOdd) {
+  String output = 'Even numbers:$evenNumbers'
+      '\nSum of even number:${additionOfEvenNumbers.substring(1)}=$sumEven'
       '\nOdd numbers:$oddNumbers'
-      '\nSum of odd numbers:${additionOfOddNumbers.substring(1)}=$sumOfOddNumbers'
-  );
+      '\nSum of odd numbers:${additionOfOddNumbers.substring(1)}=$sumOdd';
+  return output;
+}
+
+String sort(String numbers) {
+  String evenNumbers = '',
+      oddNumbers = '',
+      additionOfEvenNumbers = '',
+      additionOfOddNumbers = '';
+  int sumEven = 0, sumOdd = 0;
+  for (int i = 0; i < numbers.length; i++) {
+    int singleNumber = int.parse(numbers[i]);
+    isEven(singleNumber);
+    evenNumbers = '${setEvenNumbers(singleNumber, evenNumbers)}';
+    oddNumbers = '${setOddNumbers(singleNumber, oddNumbers)}';
+    additionOfEvenNumbers =
+        '${additionEvenNumbers(singleNumber, additionOfEvenNumbers)}';
+    additionOfOddNumbers =
+        '${additionOddNumbers(singleNumber, additionOfOddNumbers)}';
+    sumEven = sumEvenNumbers(singleNumber, sumEven);
+    sumOdd = sumOddNumbers(singleNumber, sumOdd);
+  }
+  String output = toPrint(evenNumbers, additionOfEvenNumbers, sumEven,
+      oddNumbers, additionOfOddNumbers, sumOdd);
+
+  return output;
 }
