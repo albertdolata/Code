@@ -33,18 +33,19 @@ bool isNumberEven(int number) {
   return number % 2 == 0;
 }
 
-String addEvenNumbers(int number, String evenNumbers) {
+int addEvenNumbers(int number, int evenNumbers) {
   if (isNumberEven(number)) {
-    evenNumbers += '$number ';
+    evenNumbers += number;
     return evenNumbers;
   }
-  return '';
+  return 0;
 }
 
-String addOddNumbers(int number, String oddNumbers){
+int addOddNumbers(int number, int oddNumbers){
   if(!isNumberEven(number)){
-    oddNumbers += '$number';
+    oddNumbers += number;
     return oddNumbers;
   }
-  return '';
+  return 0;
 }
+
