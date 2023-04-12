@@ -1,15 +1,17 @@
 import 'dart:io';
-void main(){
+
+void main() {
   print('Enter height of tree');
   int? height = int.parse(stdin.readLineSync()!);
   String length = 'x';
   String spaceBar = ' ';
-  for(int i=0; i <height; i++ ){         // i = 1
-    int numberSpaceBar = height - i - 1;     // i = 1 number= 3
+  for (int i = 0; i < height; i++) {
+    // i = 1
+    int numberSpaceBar = height - i - 1; // i = 1 number= 3
     print('${spaceBar * numberSpaceBar}$length'); // . x   // i = 1    .... xxx
     length += 'xx'; // xxx               // i = 1    xxxxx
     // ....  // i = 1    .... * 3 =
-    }
+  }
 }
 
 /*
