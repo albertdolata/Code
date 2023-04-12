@@ -1,8 +1,7 @@
 import 'dart:io';
 
 void main() {
-  print('Enter numbers');
-  String stringOfNumbers = stdin.readLineSync() ?? '';
+  String userNumbers = getNumbers();
   String evenNumbers = '',
       oddNumbers = '',
       additionOfEvenNumbers = '',
@@ -27,6 +26,13 @@ void main() {
   print('Odd numbers:$oddNumbers');
   print(
       'Sum of odd numbers:${additionOfOddNumbers.substring(1)}=$sumOfOddNumbers');
+}
+
+String getNumbers(){
+  print('Enter numbers');
+  String userNumbers = stdin.readLineSync() ?? '';
+
+  return userNumbers;
 }
 
 bool isNumberEven(int number) {
