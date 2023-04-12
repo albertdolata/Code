@@ -11,6 +11,9 @@ void main() {
     int singleNumber = int.parse(userNumbers[i]);
     isEven(singleNumber);
     evenNumbers = '${setEvenNumbers(singleNumber, evenNumbers)}';
+    oddNumbers = '${setOddNumbers(singleNumber, oddNumbers)}';
+    additionOfEvenNumbers = '${additionEvenNumbers(singleNumber, additionOfEvenNumbers)}';
+    additionOfOddNumbers = '${additionOddNumbers(singleNumber, additionOfOddNumbers)}';
   //   if (isEven(singleNumber)) {
   //     evenNumbers += '$singleNumber ';
   //     additionOfEvenNumbers += '+$singleNumber';
@@ -43,28 +46,25 @@ String setEvenNumbers(int number, String even) {
   return even;
 }
 
-int addOddNumbers(int number, int oddNumbers){
+String setOddNumbers(int number, String odd){
   if(!isEven(number)){
-    oddNumbers += number;
-    return oddNumbers;
+    odd += ' $number';
   }
-  return 0;
+  return odd;
 }
 
-String operationOnEvenNumbers(int number, String additionOfEvenNumbers){
+String additionEvenNumbers(int number, String additionOfEvenNumbers){
   if(isEven(number)){
     additionOfEvenNumbers += '+$number';
-    return additionOfEvenNumbers;
   }
-  return '';
+  return additionOfEvenNumbers;
 }
 
-String operationOnOddNumbers(int number, String additionOfOddNumbers){
+String additionOddNumbers(int number, String additionOfOddNumbers){
   if(!isEven(number)){
     additionOfOddNumbers += '+$number';
-    return additionOfOddNumbers;
   }
-  return '';
+  return additionOfOddNumbers;
 }
 
 void printOutput(String evenNumbers, String oddNumbers, String additionOfEvenNumbers,
