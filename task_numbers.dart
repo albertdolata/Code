@@ -8,23 +8,18 @@ void main() {
       additionOfOddNumbers = '';
   int sumOfEvenNumbers = 0, sumOfOddNumbers = 0;
   for (int i = 0; i < userNumbers.length; i++) {
-    int tempMemory = int.parse(userNumbers[i]);
-    if (tempMemory % 2 == 0) {
-      evenNumbers += '$tempMemory ';
-      additionOfEvenNumbers += '+$tempMemory';
-      sumOfEvenNumbers += tempMemory;
+    int singleNumber = int.parse(userNumbers[i]);
+    if (singleNumber % 2 == 0) {
+      evenNumbers += '$singleNumber ';
+      additionOfEvenNumbers += '+$singleNumber';
+      sumOfEvenNumbers += singleNumber;
     } else {
-      oddNumbers += '$tempMemory ';
-      additionOfOddNumbers += '+$tempMemory';
-      sumOfOddNumbers += tempMemory;
+      oddNumbers += '$singleNumber ';
+      additionOfOddNumbers += '+$singleNumber';
+      sumOfOddNumbers += singleNumber;
     }
   }
-  print('Even numbers:$evenNumbers');
-  print(
-      'Sum of even number:${additionOfEvenNumbers.substring(1)}=$sumOfEvenNumbers');
-  print('Odd numbers:$oddNumbers');
-  print(
-      'Sum of odd numbers:${additionOfOddNumbers.substring(1)}=$sumOfOddNumbers');
+  printOutput(evenNumbers, oddNumbers, additionOfEvenNumbers, additionOfOddNumbers, sumOfEvenNumbers, sumOfOddNumbers);
 }
 
 String getNumbers(){
@@ -68,4 +63,14 @@ String operationOnOddNumbers(int number, String additionOfOddNumbers){
     return additionOfOddNumbers;
   }
   return '';
+}
+
+void printOutput(String evenNumbers, String oddNumbers, String additionOfEvenNumbers,
+    String additionOfOddNumbers, int sumOfEvenNumbers, int sumOfOddNumbers){
+  print('Even numbers:$evenNumbers');
+  print(
+      'Sum of even number:${additionOfEvenNumbers.substring(1)}=$sumOfEvenNumbers');
+  print('Odd numbers:$oddNumbers');
+  print(
+      'Sum of odd numbers:${additionOfOddNumbers.substring(1)}=$sumOfOddNumbers');
 }
