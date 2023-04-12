@@ -49,3 +49,12 @@ int addOddNumbers(int number, int oddNumbers){
   return 0;
 }
 
+String operationOnEvenNumbers(int number, String additionOfEvenNumbers){
+  if(isNumberEven(number)){
+    additionOfEvenNumbers += '+$number';
+    return additionOfEvenNumbers;
+  }
+  return '';
+}
+
+
