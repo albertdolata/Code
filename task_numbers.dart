@@ -57,4 +57,10 @@ String operationOnEvenNumbers(int number, String additionOfEvenNumbers){
   return '';
 }
 
-
+String operationOnOddNumbers(int number, String additionOfOddNumbers){
+  if(!isNumberEven(number)){
+    additionOfOddNumbers += '+$number';
+    return additionOfOddNumbers;
+  }
+  return '';
+}
