@@ -9,7 +9,7 @@ void main() {
   int sumOfEvenNumbers = 0, sumOfOddNumbers = 0;
   for (int i = 0; i < userNumbers.length; i++) {
     int singleNumber = int.parse(userNumbers[i]);
-    if (singleNumber % 2 == 0) {
+    if (isEven(singleNumber)) {
       evenNumbers += '$singleNumber ';
       additionOfEvenNumbers += '+$singleNumber';
       sumOfEvenNumbers += singleNumber;
@@ -19,7 +19,8 @@ void main() {
       sumOfOddNumbers += singleNumber;
     }
   }
-  printOutput(evenNumbers, oddNumbers, additionOfEvenNumbers, additionOfOddNumbers, sumOfEvenNumbers, sumOfOddNumbers);
+  printOutput(evenNumbers, oddNumbers, additionOfEvenNumbers,
+      additionOfOddNumbers, sumOfEvenNumbers, sumOfOddNumbers);
 }
 
 String getNumbers(){
@@ -29,12 +30,12 @@ String getNumbers(){
   return userNumbers;
 }
 
-bool isNumberEven(int number) {
+bool isEven(int number) {
   return number % 2 == 0;
 }
 
 int addEvenNumbers(int number, int evenNumbers) {
-  if (isNumberEven(number)) {
+  if (isEven(number)) {
     evenNumbers += number;
     return evenNumbers;
   }
@@ -42,7 +43,7 @@ int addEvenNumbers(int number, int evenNumbers) {
 }
 
 int addOddNumbers(int number, int oddNumbers){
-  if(!isNumberEven(number)){
+  if(!isEven(number)){
     oddNumbers += number;
     return oddNumbers;
   }
@@ -50,7 +51,7 @@ int addOddNumbers(int number, int oddNumbers){
 }
 
 String operationOnEvenNumbers(int number, String additionOfEvenNumbers){
-  if(isNumberEven(number)){
+  if(isEven(number)){
     additionOfEvenNumbers += '+$number';
     return additionOfEvenNumbers;
   }
@@ -58,7 +59,7 @@ String operationOnEvenNumbers(int number, String additionOfEvenNumbers){
 }
 
 String operationOnOddNumbers(int number, String additionOfOddNumbers){
-  if(!isNumberEven(number)){
+  if(!isEven(number)){
     additionOfOddNumbers += '+$number';
     return additionOfOddNumbers;
   }
@@ -66,11 +67,10 @@ String operationOnOddNumbers(int number, String additionOfOddNumbers){
 }
 
 void printOutput(String evenNumbers, String oddNumbers, String additionOfEvenNumbers,
-    String additionOfOddNumbers, int sumOfEvenNumbers, int sumOfOddNumbers){
-  print('Even numbers:$evenNumbers');
-  print(
-      'Sum of even number:${additionOfEvenNumbers.substring(1)}=$sumOfEvenNumbers');
-  print('Odd numbers:$oddNumbers');
-  print(
-      'Sum of odd numbers:${additionOfOddNumbers.substring(1)}=$sumOfOddNumbers');
+    String additionOfOddNumbers, int sumOfEvenNumbers, int sumOfOddNumbers) {
+  print('Even numbers:$evenNumbers'
+      '\nSum of even number:${additionOfEvenNumbers.substring(1)}=$sumOfEvenNumbers'
+      '\nOdd numbers:$oddNumbers'
+      '\nSum of odd numbers:${additionOfOddNumbers.substring(1)}=$sumOfOddNumbers'
+  );
 }
