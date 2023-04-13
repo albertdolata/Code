@@ -2,7 +2,7 @@ import 'dart:io';
 
 void main() {
   String userNumbers = getNumbers();
-  String sortedNumbers = '${sort(userNumbers)}';
+  String sortedNumbers = '${arrange(userNumbers)}';
   print(sortedNumbers);
 }
 
@@ -68,7 +68,7 @@ String toPrint(String evenNumbers, String additionOfEvenNumbers, int sumEven,
   return output;
 }
 
-String sort(String numbers) {
+String arrange(String numbers) {
   String evenNumbers = '',
       oddNumbers = '',
       additionOfEvenNumbers = '',
@@ -86,8 +86,8 @@ String sort(String numbers) {
     sumEven = sumEvenNumbers(singleNumber, sumEven);
     sumOdd = sumOddNumbers(singleNumber, sumOdd);
   }
-  String output = toPrint(evenNumbers, additionOfEvenNumbers, sumEven,
+  String arrangedNumbers = toPrint(evenNumbers, additionOfEvenNumbers, sumEven,
       oddNumbers, additionOfOddNumbers, sumOdd);
 
-  return output;
+  return arrangedNumbers;
 }
