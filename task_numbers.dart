@@ -3,6 +3,7 @@ import 'dart:io';
 void main() {
   String userNumbers = getNumbers();
   String sortedNumbers = '${arrange(userNumbers)}';
+  Binder binderNumbers =
   print(sortedNumbers);
 }
 
@@ -68,26 +69,57 @@ String toPrint(String evenNumbers, String additionOfEvenNumbers, int sumEven,
   return output;
 }
 
-String arrange(String numbers) {
-  String evenNumbers = '',
-      oddNumbers = '',
-      additionOfEvenNumbers = '',
-      additionOfOddNumbers = '';
-  int sumEven = 0, sumOdd = 0;
-  for (int i = 0; i < numbers.length; i++) {
+
+class Binder {
+  String evenNumbers = '';
+  String oddNumbers = '';
+  String additionOfEvenNumbers = '';
+  String additionOfOddNumbers = '';
+  int sumEven = 0;
+  int sumOdd = 0;
+
+  String filter(String evenNumbers, String oddNumbers,
+      String additionOfEvenNumbers, String additionOfOddNumbers,
+      int sumEven, int sumOdd, String numbers ){
+    for (int i = 0; i < numbers.length; i++) {
+      int singleNumber = int.parse(numbers[i]);
+      isEven(singleNumber);
+      evenNumbers = setEvenNumbers(singleNumber, evenNumbers);
+      oddNumbers = setOddNumbers(singleNumber, oddNumbers);
+      additionOfEvenNumbers =
+          additionEvenNumbers(singleNumber, additionOfEvenNumbers);
+      additionOfOddNumbers =
+          additionOddNumbers(singleNumber, additionOfOddNumbers);
+      sumEven = sumEvenNumbers(singleNumber, sumEven);
+      sumOdd = sumOddNumbers(singleNumber, sumOdd);
+    }
+    String filteredNumbers = toPrint(evenNumbers, additionOfEvenNumbers, sumEven,
+        oddNumbers, additionOfOddNumbers, sumOdd);
+
+
+    return filteredNumbers;
+  }
+
+}
+
+String filter(String evenNumbers, String oddNumbers,
+              String additionOfEvenNumbers, String additionOfOddNumbers,
+              int sumEven, int sumOdd, String numbers ){
+    for (int i = 0; i < numbers.length; i++) {
     int singleNumber = int.parse(numbers[i]);
     isEven(singleNumber);
     evenNumbers = setEvenNumbers(singleNumber, evenNumbers);
     oddNumbers = setOddNumbers(singleNumber, oddNumbers);
     additionOfEvenNumbers =
-        additionEvenNumbers(singleNumber, additionOfEvenNumbers);
+    additionEvenNumbers(singleNumber, additionOfEvenNumbers);
     additionOfOddNumbers =
-        additionOddNumbers(singleNumber, additionOfOddNumbers);
+    additionOddNumbers(singleNumber, additionOfOddNumbers);
     sumEven = sumEvenNumbers(singleNumber, sumEven);
     sumOdd = sumOddNumbers(singleNumber, sumOdd);
-  }
-  String arrangedNumbers = toPrint(evenNumbers, additionOfEvenNumbers, sumEven,
-      oddNumbers, additionOfOddNumbers, sumOdd);
+    }
+    String filteredNumbers = toPrint(evenNumbers, additionOfEvenNumbers, sumEven,
+    oddNumbers, additionOfOddNumbers, sumOdd);
 
-  return arrangedNumbers;
+
+    return filteredNumbers;
 }
