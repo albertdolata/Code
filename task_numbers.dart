@@ -77,12 +77,12 @@ String sort(String numbers) {
   for (int i = 0; i < numbers.length; i++) {
     int singleNumber = int.parse(numbers[i]);
     isEven(singleNumber);
-    evenNumbers = '${setEvenNumbers(singleNumber, evenNumbers)}';
-    oddNumbers = '${setOddNumbers(singleNumber, oddNumbers)}';
+    evenNumbers = setEvenNumbers(singleNumber, evenNumbers);
+    oddNumbers = setOddNumbers(singleNumber, oddNumbers);
     additionOfEvenNumbers =
-        '${additionEvenNumbers(singleNumber, additionOfEvenNumbers)}';
+        additionEvenNumbers(singleNumber, additionOfEvenNumbers);
     additionOfOddNumbers =
-        '${additionOddNumbers(singleNumber, additionOfOddNumbers)}';
+        additionOddNumbers(singleNumber, additionOfOddNumbers);
     sumEven = sumEvenNumbers(singleNumber, sumEven);
     sumOdd = sumOddNumbers(singleNumber, sumOdd);
   }
