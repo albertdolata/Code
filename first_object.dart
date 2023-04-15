@@ -18,16 +18,16 @@ void main(){
 
 class Example{
  int firstNumber = 0;
- int secondNumber = 0;
+ int secondNumber = 0;  //properties
  int thirdNumber = 0;
 
-  Example(int x, int y, int z){
+  Example(int x, int y, int z){   //constructor
     firstNumber = x;
     secondNumber = y;
     thirdNumber = z;
   }
 
-void printHello(){
+void printHello(){        //method
     print(firstNumber);
     print(secondNumber);
     print(thirdNumber);
