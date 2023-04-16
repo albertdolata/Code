@@ -4,8 +4,8 @@ import 'binder.dart';
 
 void main() {
   String userNumbers = getNumbers();
-  String sortedNumbers = filter(userNumbers);
-  print(sortedNumbers);
+  String filteredNumbers = filter(userNumbers);
+  print(filteredNumbers);
 }
 
 String getNumbers() {
