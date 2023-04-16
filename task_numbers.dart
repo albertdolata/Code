@@ -1,11 +1,10 @@
 import 'dart:io';
 import 'filter.dart';
-import 'binder.dart';
 
 void main() {
   String userNumbers = getNumbers();
-  String filteredNumbers = filter(userNumbers);
-  print(filteredNumbers);
+  SumFilter numberFilter = SumFilter(userNumbers);
+  print('${numberFilter.filterNumbers()} \n${numberFilter.addUpNumbers()}');
 }
 
 String getNumbers() {
