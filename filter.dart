@@ -26,7 +26,7 @@ class SumFilter {
         sumOfOddNumbers += int.parse(numbers[i]);
       }
     }
-    return 'Sum of even numbers: $sumOfOddNumbers '
+    return 'Sum of even numbers: $sumOfEvenNumbers '
         '\nSum of odd numbers: $sumOfOddNumbers';
   }
 }
