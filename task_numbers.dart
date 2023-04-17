@@ -10,6 +10,7 @@ void main() {
 String getNumbers() {
   print('Enter numbers');
   String userNumbers = stdin.readLineSync() ?? '';
+  userNumbers = userNumbers.replaceAll(RegExp('[^0-9]'), '');
 
   return userNumbers;
 }
