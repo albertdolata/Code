@@ -11,10 +11,12 @@ class SumFilter {
     return numbers;
   }
 
+  bool isEven(List numbers, int i) => numbers[i] % 2 == 0;
+
   List filterEvenNumbers(List numbers) {
     List evenNumbers = [];
     for (int i = 0; i < numbers.length; i++) {
-      if (numbers[i] % 2 == 0) {
+      if (isEven(numbers, i)) {
         evenNumbers.add(numbers[i]);
       }
     }
@@ -24,7 +26,7 @@ class SumFilter {
   List filterOddNumbers(List numbers) {
     List oddNumbers = [];
     for (int i = 0; i < numbers.length; i++) {
-      if (numbers[i] % 2 == 1) {
+      if (!isEven(numbers, i)) {
         oddNumbers.add(numbers[i]);
       }
     }
