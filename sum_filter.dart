@@ -3,11 +3,19 @@ class SumFilter {
 
   SumFilter(this._numbers);
 
+  List convertStringToList(){
+    List numbers =[];
+    for (int i = 0; i < _numbers.length; i++) {
+      numbers.add(int.parse(_numbers[i]));
+    }
+    return numbers;
+  }
+
   String filterEvenNumbers() {
     String evenNumbers = '';
     for (int i = 0; i < _numbers.length; i++) {
       if (int.parse(_numbers[i]) % 2 == 0) {
-        evenNumbers += '${_numbers[i]},';
+        evenNumbers += '${_numbers[i]}';
       }
     }
     return evenNumbers;
@@ -17,7 +25,7 @@ class SumFilter {
     String oddNumbers = '';
     for (int i = 0; i < _numbers.length; i++) {
       if (int.parse(_numbers[i]) % 2 == 1) {
-        oddNumbers += '${_numbers[i]},';
+        oddNumbers += '${_numbers[i]}';
       }
     }
     return oddNumbers;
