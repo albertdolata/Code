@@ -4,8 +4,10 @@ import 'sum_filter.dart';
 void main() {
   String userNumbers = getNumbers();
   SumFilter sumFilter = SumFilter(userNumbers);
-  print(sumFilter.filterNumbers());
-  print(sumFilter.addUpNumbers());
+  sumFilter.showEvenNumbers();
+  sumFilter.showOddNumbers();
+  sumFilter.showSumOfEvenNumbers();
+  sumFilter.showSumOfOddNumbers();
 }
 
 String getNumbers() {
