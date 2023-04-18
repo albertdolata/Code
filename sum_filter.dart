@@ -11,62 +11,66 @@ class SumFilter {
     return numbers;
   }
 
-  String filterEvenNumbers() {
-    String evenNumbers = '';
-    for (int i = 0; i < _numbers.length; i++) {
-      if (int.parse(_numbers[i]) % 2 == 0) {
-        evenNumbers += '${_numbers[i]}';
+  List filterEvenNumbers(List numbers) {
+    List evenNumbers = [];
+    for (int i = 0; i < numbers.length; i++) {
+      if (numbers[i] % 2 == 0) {
+        evenNumbers.add(numbers[i]);
       }
     }
     return evenNumbers;
   }
 
-  String filterOddNumbers() {
-    String oddNumbers = '';
-    for (int i = 0; i < _numbers.length; i++) {
-      if (int.parse(_numbers[i]) % 2 == 1) {
-        oddNumbers += '${_numbers[i]}';
+  List filterOddNumbers(List numbers) {
+    List oddNumbers = [];
+    for (int i = 0; i < numbers.length; i++) {
+      if (numbers[i] % 2 == 1) {
+        oddNumbers.add(numbers[i]);
       }
     }
     return oddNumbers;
   }
 
   void showEvenNumbers() {
-    print('Even numbers : ${filterEvenNumbers()}');
+    print('Even numbers : ${filterEvenNumbers(convertStringToList()).join(', ')}');
   }
 
   void showOddNumbers() {
-    print('Even numbers : ${filterOddNumbers()}');
+    print('Odd numbers : ${filterOddNumbers(convertStringToList()).join(', ')}');
   }
 
   int addUpEvenNumbers() {
+    int number = 0;
     int sumOfEvenNumbers = 0;
-    for (int i = 0; i < filterEvenNumbers().length; i++) {
-      sumOfEvenNumbers += int.parse(filterEvenNumbers()[i]);
+    for (int i = 0; i < filterEvenNumbers(convertStringToList()).length; i++) {
+       number = filterEvenNumbers(convertStringToList())[i];
+       sumOfEvenNumbers += number;
     }
     return sumOfEvenNumbers;
   }
 
   int addUpOddNumbers() {
+    int number =0;
     int sumOfOddNumbers = 0;
-    for (int i = 0; i < filterOddNumbers().length; i++) {
-      sumOfOddNumbers += int.parse(filterOddNumbers()[i]);
+    for (int i = 0; i < filterOddNumbers(convertStringToList()).length; i++) {
+      number = filterEvenNumbers(convertStringToList())[i];
+      sumOfOddNumbers += number;
     }
     return sumOfOddNumbers;
   }
 
   String operationSumOfEvenNumbers() {
     String operation = '';
-    for (int i = 0; i < filterEvenNumbers().length; i++) {
-      operation += '+ ${filterEvenNumbers()[i]} ';
+    for (int i = 0; i < filterEvenNumbers(convertStringToList()).length; i++) {
+      operation += '+ ${filterEvenNumbers(convertStringToList())[i]} ';
     }
     return operation.substring(1);
   }
 
   String operationSumOfOddNumbers() {
     String operation = '';
-    for (int i = 0; i < filterOddNumbers().length; i++) {
-      operation += '+ ${filterOddNumbers()[i]} ';
+    for (int i = 0; i < filterOddNumbers(convertStringToList()).length; i++) {
+      operation += '+ ${filterOddNumbers(convertStringToList())[i]} ';
     }
     return operation.substring(1);
   }
@@ -80,4 +84,4 @@ class SumFilter {
     print('Sum of odd numbers:${operationSumOfOddNumbers()} '
         '= ${addUpOddNumbers()}');
   }
-}
+ }
