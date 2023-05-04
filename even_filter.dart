@@ -1,4 +1,4 @@
 import 'filter.dart';
 
-class EvenFilter {
+class EvenFilter extends Filter {
 }
