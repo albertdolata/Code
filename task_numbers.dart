@@ -6,6 +6,8 @@ void main() {
   String userNumbers = getNumbers();
   EvenFilter evenFilter = EvenFilter(userNumbers);
   OddFilter oddFilter = OddFilter(userNumbers);
+  evenFilter.showNumbers();
+  evenFilter.showSumOfNumbers();
 }
 
 String getNumbers() {
