@@ -33,4 +33,9 @@ class OddFilter extends Filter{
     }
     return operation.substring(1);
   }
+
+  @override
+  void showNumbers() {
+    print('Odd numbers : ${filterOddNumbers(convertStringToList()).join(', ')}');
+  }
 }
