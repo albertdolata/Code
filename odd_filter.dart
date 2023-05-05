@@ -36,6 +36,6 @@ class OddFilter extends Filter{
 
   @override
   void showNumbers() {
-    print('Odd numbers : ${filterOddNumbers(convertStringToList()).join(', ')}');
+    print('Odd numbers : ${filterNumbers(convertStringToList()).join(', ')}');
   }
 }
