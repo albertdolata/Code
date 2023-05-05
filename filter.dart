@@ -20,5 +20,6 @@ abstract class Filter {
   String operationSumOfNumbers();
 
   void showNumbers();
-  
+
+  void showSumOfNumbers();
 }
