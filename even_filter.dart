@@ -33,4 +33,10 @@ class EvenFilter extends Filter {
     }
     return operation.substring(1);
   }
+
+  @override
+  void showNumbers() {
+    print('Sum of even numbers:${operationSumOfNumbers()} '
+        '= ${addUpNumbers()}');
+  }
 }
