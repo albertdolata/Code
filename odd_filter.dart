@@ -38,4 +38,10 @@ class OddFilter extends Filter{
   void showNumbers() {
     print('Odd numbers : ${filterNumbers(convertStringToList()).join(', ')}');
   }
+
+  @override
+  void showSumOfNumbers() {
+      print('Sum of odd numbers:${operationSumOfNumbers()} '
+          '= ${addUpNumbers()}');
+    }
 }
