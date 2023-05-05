@@ -13,4 +13,15 @@ class OddFilter extends Filter{
     }
     return oddNumbers;
   }
+
+  @override
+  int addUpNumbers() {
+    int number =0;
+    int sumOfOddNumbers = 0;
+    for (int i = 0; i < filterNumbers(convertStringToList()).length; i++) {
+      number = filterNumbers(convertStringToList())[i];
+      sumOfOddNumbers += number;
+    }
+    return sumOfOddNumbers;
+  }
 }
