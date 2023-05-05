@@ -1,5 +1,4 @@
 import 'dart:io';
-import 'sum_filter.dart';
 
 void main() {
   String userNumbers = getNumbers();
