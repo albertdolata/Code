@@ -12,4 +12,7 @@ abstract class Filter {
   }
 
   bool isEven(List numbers, int i) => numbers[i] % 2 == 0;
+
+  List filterNumbers();
+  
 }
