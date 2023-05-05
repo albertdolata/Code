@@ -8,6 +8,8 @@ void main() {
   OddFilter oddFilter = OddFilter(userNumbers);
   evenFilter.showNumbers();
   evenFilter.showSumOfNumbers();
+  oddFilter.showNumbers();
+  oddFilter.showSumOfNumbers();
 }
 
 String getNumbers() {
