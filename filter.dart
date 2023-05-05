@@ -16,5 +16,7 @@ abstract class Filter {
   List filterNumbers();
 
   int addUpNumbers();
+
+  String operationSumOfNumbers();
   
 }
