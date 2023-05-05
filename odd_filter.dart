@@ -1,4 +1,4 @@
 import 'filter.dart';
 
-class OddFilter{
+class OddFilter extends Filter{
 }
