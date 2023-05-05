@@ -38,4 +38,10 @@ class EvenFilter extends Filter {
   void showNumbers() {
     print('Even numbers : ${filterNumbers(convertStringToList()).join(', ')}');
   }
+  
+  @override
+  void showSumOfNumbers() {
+    print('Sum of even numbers:${operationSumOfNumbers()} '
+        '= ${addUpNumbers()}');
+  }
 }
