@@ -18,5 +18,7 @@ abstract class Filter {
   int addUpNumbers();
 
   String operationSumOfNumbers();
+
+  void showNumbers();
   
 }
