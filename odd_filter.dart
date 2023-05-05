@@ -24,4 +24,13 @@ class OddFilter extends Filter{
     }
     return sumOfOddNumbers;
   }
+
+  @override
+  String operationSumOfNumbers(){
+    String operation = '';
+    for (int i = 0; i < filterNumbers(convertStringToList()).length; i++) {
+      operation += '+ ${filterNumbers(convertStringToList())[i]} ';
+    }
+    return operation.substring(1);
+  }
 }
