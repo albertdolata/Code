@@ -4,6 +4,7 @@ import 'odd_filter.dart';
 
 void main() {
   String userNumbers = getNumbers();
+  EvenFilter evenFilter = EvenFilter(userNumbers);
 }
 
 String getNumbers() {
