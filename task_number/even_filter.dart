@@ -28,8 +28,8 @@ class EvenFilter extends Filter {
   @override
   String createMathOperationOfAddNumbers(List numbers){
     String operation = '';
-    for (int i = 0; i < filterNumbers(convertStringListToIntList()).length; i++) {
-      operation += '+ ${filterNumbers(convertStringListToIntList())[i]} ';
+    for (int i = 0; i < numbers.length; i++) {
+      operation += '+ ${numbers[i]} ';
     }
     return operation.substring(1);
   }
