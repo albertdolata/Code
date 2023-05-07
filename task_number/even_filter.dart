@@ -28,20 +28,20 @@ class EvenFilter extends Filter {
   @override
   String createMathOperationOfAddNumbers(){
     String operation = '';
-    for (int i = 0; i < filterNumbers(convertStringToList()).length; i++) {
-      operation += '+ ${filterNumbers(convertStringToList())[i]} ';
+    for (int i = 0; i < filterNumbers(convertStringListToIntList()).length; i++) {
+      operation += '+ ${filterNumbers(convertStringListToIntList())[i]} ';
     }
     return operation.substring(1);
   }
 
   @override
   void showNumbers() {
-    print('Even numbers : ${filterNumbers(convertStringToList()).join(', ')}');
+    print('Even numbers : ${filterNumbers(convertStringListToIntList()).join(', ')}');
   }
   
   @override
   void showSumOfNumbers() {
     print('Sum of even numbers:${createMathOperationOfAddNumbers()} '
-        '= ${addUpNumbers(filterNumbers(convertStringToList()))}');
+        '= ${addUpNumbers(filterNumbers(convertStringListToIntList()))}');
   }
 }
