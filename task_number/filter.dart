@@ -4,7 +4,7 @@ abstract class Filter {
   Filter(this._numbers);
 
   List convertStringToList(){
-    List numbers =[];
+    List numbers = [];
     for (int i = 0; i < _numbers.length; i++) {
       numbers.add(int.parse(_numbers[i]));
     }
