@@ -42,6 +42,6 @@ class EvenFilter extends Filter {
   @override
   void showSumOfNumbers() {
     print('Sum of even numbers:${createMathOperationOfAddNumbers()} '
-        '= ${addUpNumbers()}');
+        '= ${addUpNumbers(filterNumbers(convertStringToList()))}');
   }
 }
