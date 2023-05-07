@@ -15,7 +15,7 @@ abstract class Filter {
 
   List filterNumbers(List numbers);
 
-  int addUpNumbers();
+  int addUpNumbers(List numbers);
 
   String createMathOperationOfAddNumbers();
 
