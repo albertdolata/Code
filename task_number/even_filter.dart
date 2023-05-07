@@ -26,7 +26,7 @@ class EvenFilter extends Filter {
   }
 
   @override
-  String createMathOperationOfAddNumbers(){
+  String createMathOperationOfAddNumbers(List number){
     String operation = '';
     for (int i = 0; i < filterNumbers(convertStringListToIntList()).length; i++) {
       operation += '+ ${filterNumbers(convertStringListToIntList())[i]} ';
