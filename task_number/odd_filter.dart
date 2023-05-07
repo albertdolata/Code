@@ -15,13 +15,9 @@ class OddFilter extends Filter{
   }
 
   @override
-  int addUpNumbers(List numbers) {
-    int number =0;
-    int sumOfOddNumbers = 0;
-    for (int i = 0; i < numbers.length; i++) {
-      number = numbers[i];
-      sumOfOddNumbers += number;
-    }
+  num addUpNumbers(List numbers) {
+    num sumOfOddNumbers = 0;
+    numbers.forEach((element) {sumOfOddNumbers += element;});
     return sumOfOddNumbers;
   }
 

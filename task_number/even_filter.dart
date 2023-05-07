@@ -15,13 +15,9 @@ class EvenFilter extends Filter {
   }
 
   @override
-  int addUpNumbers(List numbers) {
-    int number = 0;
-    int sumOfEvenNumbers = 0;
-    for (int i = 0; i < numbers.length; i++) {
-      number = numbers[i];
-      sumOfEvenNumbers += number;
-    }
+  num addUpNumbers(List numbers) {
+    num sumOfEvenNumbers = 0;
+    numbers.forEach((element) {sumOfEvenNumbers += element;});
     return sumOfEvenNumbers;
   }
 
