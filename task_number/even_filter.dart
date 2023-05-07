@@ -18,8 +18,8 @@ class EvenFilter extends Filter {
   int addUpNumbers(List numbers) {
     int number = 0;
     int sumOfEvenNumbers = 0;
-    for (int i = 0; i < filterNumbers(convertStringToList()).length; i++) {
-      number = filterNumbers(convertStringToList())[i];
+    for (int i = 0; i < numbers.length; i++) {
+      number = numbers[i];
       sumOfEvenNumbers += number;
     }
     return sumOfEvenNumbers;
