@@ -26,7 +26,7 @@ class OddFilter extends Filter{
   }
 
   @override
-  String operationSumOfNumbers(){
+  String createMathOperationOfAddNumbers(){
     String operation = '';
     for (int i = 0; i < filterNumbers(convertStringToList()).length; i++) {
       operation += '+ ${filterNumbers(convertStringToList())[i]} ';
@@ -41,7 +41,7 @@ class OddFilter extends Filter{
 
   @override
   void showSumOfNumbers() {
-      print('Sum of odd numbers:${operationSumOfNumbers()} '
+      print('Sum of odd numbers:${createMathOperationOfAddNumbers()} '
           '= ${addUpNumbers()}');
     }
 }
