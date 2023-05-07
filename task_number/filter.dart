@@ -13,7 +13,7 @@ abstract class Filter {
 
   int addUpNumbers(List numbers);
 
-  String createMathOperationOfAddNumbers();
+  String createMathOperationOfAddNumbers(List numbers);
 
   void showNumbers();
 
