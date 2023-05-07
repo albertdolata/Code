@@ -1,10 +1,10 @@
 import 'filter.dart';
 
-class OddFilter extends Filter{
+class OddFilter extends Filter {
   OddFilter(String numbers) : super (numbers);
 
   @override
-  List filterNumbers(List numbers){
+  List filterNumbers(List numbers) {
     List oddNumbers = [];
     for (int i = 0; i < numbers.length; i++) {
       if (!isEven(numbers, i)) {
@@ -22,7 +22,7 @@ class OddFilter extends Filter{
   }
 
   @override
-  String createMathOperationOfAddNumbers(List numbers){
+  String createMathOperationOfAddNumbers(List numbers) {
     String operation = '';
     for (int i = 0; i < numbers.length; i++) {
       operation += '+ ${numbers[i]} ';
@@ -32,12 +32,14 @@ class OddFilter extends Filter{
 
   @override
   void showNumbers() {
-    print('Odd numbers : ${filterNumbers(convertStringListToIntList()).join(', ')}');
+    print('Odd numbers : ${filterNumbers
+      (convertStringListToIntList()).join(', ')}');
   }
 
   @override
   void showSumOfNumbers() {
-      print('Sum of odd numbers:${createMathOperationOfAddNumbers(filterNumbers(convertStringListToIntList()))} '
+      print('Sum of odd numbers:${createMathOperationOfAddNumbers
+        (filterNumbers(convertStringListToIntList()))} '
           '= ${addUpNumbers(filterNumbers(convertStringListToIntList()))}');
     }
 }

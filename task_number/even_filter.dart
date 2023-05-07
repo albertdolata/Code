@@ -4,7 +4,7 @@ class EvenFilter extends Filter {
   EvenFilter(String numbers) : super(numbers);
 
   @override
-  List filterNumbers(List numbers){
+  List filterNumbers(List numbers) {
     List evenNumbers = [];
     for (int i = 0; i < numbers.length; i++) {
       if (isEven(numbers, i)) {
@@ -22,7 +22,7 @@ class EvenFilter extends Filter {
   }
 
   @override
-  String createMathOperationOfAddNumbers(List numbers){
+  String createMathOperationOfAddNumbers(List numbers) {
     String operation = '';
     for (int i = 0; i < numbers.length; i++) {
       operation += '+ ${numbers[i]} ';
@@ -32,12 +32,14 @@ class EvenFilter extends Filter {
 
   @override
   void showNumbers() {
-    print('Even numbers : ${filterNumbers(convertStringListToIntList()).join(', ')}');
+    print('Even numbers : ${filterNumbers
+      (convertStringListToIntList()).join(', ')}');
   }
-  
+
   @override
   void showSumOfNumbers() {
-    print('Sum of even numbers:${createMathOperationOfAddNumbers(filterNumbers(convertStringListToIntList()))} '
+    print('Sum of even numbers:${createMathOperationOfAddNumbers
+      (filterNumbers(convertStringListToIntList()))} '
         '= ${addUpNumbers(filterNumbers(convertStringListToIntList()))}');
   }
 }
