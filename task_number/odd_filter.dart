@@ -15,7 +15,7 @@ class OddFilter extends Filter{
   }
 
   @override
-  int addUpNumbers() {
+  int addUpNumbers(List numbers) {
     int number =0;
     int sumOfOddNumbers = 0;
     for (int i = 0; i < filterNumbers(convertStringToList()).length; i++) {
