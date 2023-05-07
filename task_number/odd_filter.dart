@@ -41,7 +41,7 @@ class OddFilter extends Filter{
 
   @override
   void showSumOfNumbers() {
-      print('Sum of odd numbers:${createMathOperationOfAddNumbers()} '
+      print('Sum of odd numbers:${createMathOperationOfAddNumbers(filterNumbers(convertStringListToIntList()))} '
           '= ${addUpNumbers(filterNumbers(convertStringListToIntList()))}');
     }
 }
