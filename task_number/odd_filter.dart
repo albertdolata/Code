@@ -26,7 +26,7 @@ class OddFilter extends Filter{
   }
 
   @override
-  String createMathOperationOfAddNumbers(List number){
+  String createMathOperationOfAddNumbers(List numbers){
     String operation = '';
     for (int i = 0; i < filterNumbers(convertStringListToIntList()).length; i++) {
       operation += '+ ${filterNumbers(convertStringListToIntList())[i]} ';
