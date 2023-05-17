@@ -79,6 +79,7 @@ class SoyMilk extends IngredientsDecorator {
   SoyMilk(this.drink);
 
   String getDescription() => drink.getDescription() + ", Soy Milk";
+  
 
   @override
   double cost() {
@@ -110,14 +111,13 @@ class StarCafe {
   void main() {
     Drink drink = Espresso();
     drink.setSize("Large");
-    drink = Chocolate(drink);
-    print(drink.getDescription() + " ${drink.cost().toStringAsFixed(2)}  zł");
+    print(drink.getDescription()  + ", " + drink.getSize() + " " +  drink.cost().toStringAsFixed(2) + " zł");
 
     Drink drink2 = HeavilyRoastedCoffee();
     drink2 = Chocolate(drink2);
     drink2 = Chocolate(drink2);
     drink2 = WhippedCream(drink2);
-    print(drink2.getDescription() + " ${drink2.cost().toStringAsFixed(2)}  zł");
+    print(drink2.getDescription()  + ", " + drink2.getSize() + " " + drink2.cost().toStringAsFixed(2) + " zł");
 
 
     Drink drink3 = StarCafeSpecial();
@@ -125,12 +125,12 @@ class StarCafe {
     drink3 = SoyMilk(drink3);
     drink3 = Chocolate(drink3);
     drink3 = WhippedCream(drink3);
-    print(drink3.getDescription() + " ${drink3.cost().toStringAsFixed(2)}  zł");
+    print(drink3.getDescription()  + ", " + drink3.getSize() + " " + drink3.cost().toStringAsFixed(2) + " zł");
 
     Drink drink4 = DecaffeinatedCoffee();
     drink4 = Milk(drink4);
     drink4 = WhippedCream(drink4);
-    print(drink4.getDescription() + " ${drink4.cost().toStringAsFixed(2)}  zł");
+    print(drink4.getDescription()  + ", " + drink4.getSize() + " " + drink4.cost().toStringAsFixed(2) + " zł");
   }
 }
 
