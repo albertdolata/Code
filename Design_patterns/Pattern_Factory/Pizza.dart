@@ -19,4 +19,6 @@ class Pizza {
   void slice() => print("Slicing pizza into 8 pieces");
 
   void pack() => print("Packing pizza in the official box of our Pizza chain");
+
+  String getName() => name;
 }
