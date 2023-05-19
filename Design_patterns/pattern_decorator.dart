@@ -11,8 +11,9 @@ abstract class Drink {
   String setSize(String size) => this.size = size;
 }
 
-abstract class IngredientsDecorator extends Drink{
+abstract class IngredientsDecorator extends Drink {
   String getDescription();
+
   String getSize();
 }
 
@@ -26,7 +27,7 @@ class Espresso extends Drink {
 }
 
 class StarCafeSpecial extends Drink {
-  StarCafeSpecial(){
+  StarCafeSpecial() {
     description = "Star Cafe Special Coffee";
   }
 
@@ -35,7 +36,7 @@ class StarCafeSpecial extends Drink {
 }
 
 class HeavilyRoastedCoffee extends Drink {
-  HeavilyRoastedCoffee(){
+  HeavilyRoastedCoffee() {
     description = "Heavily Roasted Coffee";
   }
 
@@ -44,7 +45,7 @@ class HeavilyRoastedCoffee extends Drink {
 }
 
 class DecaffeinatedCoffee extends Drink {
-  DecaffeinatedCoffee(){
+  DecaffeinatedCoffee() {
     description = "Decaffeinated Coffee";
   }
 
@@ -61,8 +62,8 @@ class Chocolate extends IngredientsDecorator {
 
   String getSize() => drink.getSize();
 
-    @override
-    double cost() => drink.cost() + 0.20;
+  @override
+  double cost() => drink.cost() + 0.20;
 }
 
 class Milk extends IngredientsDecorator {
@@ -71,9 +72,7 @@ class Milk extends IngredientsDecorator {
   Milk(this.drink);
 
   String getDescription() => drink.getDescription() + ", Milk";
-
   String getSize() => drink.getSize();
-
   @override
   double cost() => drink.cost() + 0.10;
 }
@@ -91,11 +90,11 @@ class SoyMilk extends IngredientsDecorator {
   @override
   double cost() {
     double cost = drink.cost();
-    if(getSize() == "Small"){
+    if (getSize() == "Small") {
       cost += 0.10;
-    }else if(getSize() == "Medium"){
+    } else if (getSize() == "Medium") {
       cost += 0.15;
-    }else if(getSize() == "Large"){
+    } else if (getSize() == "Large") {
       cost += 0.20;
     }
     return cost;
@@ -116,36 +115,43 @@ class WhippedCream extends IngredientsDecorator {
 }
 
 class StarCafe {
-
   void main() {
     Drink drink = Espresso();
     drink.setSize("Large");
-    print(drink.getDescription()  + ", " + drink.getSize() + " " +  drink.cost().toStringAsFixed(2) + " zł");
+    drink = Chocolate(drink);
+    print(drink.getDescription() +
+        ", ${drink.getSize()} " +
+        " ${drink.cost().toStringAsFixed(2)}  zł");
 
     Drink drink2 = HeavilyRoastedCoffee();
-    drink.setSize("Small");
+    drink2.setSize("Small");
     drink2 = Chocolate(drink2);
     drink2 = Chocolate(drink2);
     drink2 = WhippedCream(drink2);
-    print(drink2.getDescription()  + ", " + drink2.getSize() + " " + drink2.cost().toStringAsFixed(2) + " zł");
-
+    print(drink2.getDescription() +
+        ", ${drink2.getSize()} " +
+        " ${drink2.cost().toStringAsFixed(2)}  zł");
 
     Drink drink3 = StarCafeSpecial();
     drink3.setSize("Large");
     drink3 = SoyMilk(drink3);
     drink3 = Chocolate(drink3);
     drink3 = WhippedCream(drink3);
-    print(drink3.getDescription()  + ", " + drink3.getSize() + " " + drink3.cost().toStringAsFixed(2) + " zł");
+    print(drink3.getDescription() +
+        ", ${drink3.getSize()} " +
+        " ${drink3.cost().toStringAsFixed(2)}  zł");
 
     Drink drink4 = DecaffeinatedCoffee();
     drink4.setSize("Medium");
     drink4 = Milk(drink4);
     drink4 = WhippedCream(drink4);
-    print(drink4.getDescription()  + ", " + drink4.getSize() + " " + drink4.cost().toStringAsFixed(2) + " zł");
+    print(drink4.getDescription() +
+        ", ${drink4.getSize()} " +
+        " ${drink4.cost().toStringAsFixed(2)}  zł");
   }
 }
 
-void main(){
+void main() {
   StarCafe starCafe = StarCafe();
   starCafe.main();
 }
