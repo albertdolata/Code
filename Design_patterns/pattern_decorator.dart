@@ -4,11 +4,11 @@ abstract class Drink {
 
   String getDescription() => description;
 
-  String setSize(String size) => this.size = size;
-
   String getSize() => size;
 
   double cost();
+
+  String setSize(String size) => this.size = size;
 }
 
 abstract class IngredientsDecorator extends Drink{
@@ -29,6 +29,7 @@ class StarCafeSpecial extends Drink {
   StarCafeSpecial(){
     description = "Star Cafe Special Coffee";
   }
+
   @override
   double cost() => 0.89;
 }
@@ -58,6 +59,8 @@ class Chocolate extends IngredientsDecorator {
 
   String getDescription() => drink.getDescription() + ", Chocolate";
 
+  String getSize() => drink.getSize();
+
     @override
     double cost() => drink.cost() + 0.20;
 }
@@ -69,6 +72,8 @@ class Milk extends IngredientsDecorator {
 
   String getDescription() => drink.getDescription() + ", Milk";
 
+  String getSize() => drink.getSize();
+
   @override
   double cost() => drink.cost() + 0.10;
 }
@@ -78,8 +83,10 @@ class SoyMilk extends IngredientsDecorator {
 
   SoyMilk(this.drink);
 
+  String getSize() => drink.getSize();
+
   String getDescription() => drink.getDescription() + ", Soy Milk";
-  
+
 
   @override
   double cost() {
@@ -102,6 +109,8 @@ class WhippedCream extends IngredientsDecorator {
 
   String getDescription() => drink.getDescription() + ", Whipped Cream";
 
+  String getSize() => drink.getSize();
+
   @override
   double cost() => drink.cost() + 0.10;
 }
@@ -114,6 +123,7 @@ class StarCafe {
     print(drink.getDescription()  + ", " + drink.getSize() + " " +  drink.cost().toStringAsFixed(2) + " zł");
 
     Drink drink2 = HeavilyRoastedCoffee();
+    drink.setSize("Small");
     drink2 = Chocolate(drink2);
     drink2 = Chocolate(drink2);
     drink2 = WhippedCream(drink2);
@@ -128,6 +138,7 @@ class StarCafe {
     print(drink3.getDescription()  + ", " + drink3.getSize() + " " + drink3.cost().toStringAsFixed(2) + " zł");
 
     Drink drink4 = DecaffeinatedCoffee();
+    drink4.setSize("Medium");
     drink4 = Milk(drink4);
     drink4 = WhippedCream(drink4);
     print(drink4.getDescription()  + ", " + drink4.getSize() + " " + drink4.cost().toStringAsFixed(2) + " zł");
