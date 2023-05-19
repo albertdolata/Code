@@ -9,9 +9,12 @@ class Pizza {
     print("Kneading the dough...");
     print("Adding sauce...");
     print("Toppings: ");
-    for (int i = 0; i < toppings.length, i++) {
+    for (int i = 0; i < toppings.length; i++) {
       print(" " + toppings[i]);
     }
   }
 
+  void bake() => print("Baking: 25 minutes at 350 Celsius degree");
+
+  void slice() => print("Slicing pizza into 8 pieces");
 }
