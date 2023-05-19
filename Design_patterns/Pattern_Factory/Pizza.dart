@@ -1,8 +1,8 @@
 class Pizza {
-  String name;
-  String dough;
-  String sauce;
-  List<String> toppings;
+  String name = "";
+  String dough = "";
+  String sauce = "";
+  List<String> toppings = [];
 
   void prepare() {
     print("Prepare: " + name);
