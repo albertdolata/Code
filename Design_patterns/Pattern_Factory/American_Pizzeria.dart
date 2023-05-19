@@ -1,3 +1,6 @@
+import 'American_Pepperoni_Pizza.dart';
+import 'American_Seafood_Pizza.dart';
+import 'American_Vegetarian_Pizza.dart';
 import 'Pizzeria.dart';
 import 'Pizza.dart';
 import 'AmericanCheesePizza.dart';
