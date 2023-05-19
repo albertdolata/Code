@@ -8,14 +8,15 @@ import 'AmericanCheesePizza.dart';
 class AmericanPizzeria extends Pizzeria {
   @override
   Pizza createPizza(String type) {
-    if (type == "cheese"){
+    if (type == "cheese") {
       return AmericanCheesePizza();
     } else if (type == "vegetarian") {
       return AmericanVegetarianPizza();
-    } else if (type == "seafood"){
-      return AmericanSeafoodPizza;
-    } else if (type == "pepperoni"){
+    } else if (type == "seafood") {
+      return AmericanSeafoodPizza();
+    } else if (type == "pepperoni") {
       return AmericanPepperoniPizza();
-    }
+    } else
+      return Pizza();
   }
 }
