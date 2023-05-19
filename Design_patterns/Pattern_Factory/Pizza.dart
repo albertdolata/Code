@@ -17,4 +17,6 @@ class Pizza {
   void bake() => print("Baking: 25 minutes at 350 Celsius degree");
 
   void slice() => print("Slicing pizza into 8 pieces");
+
+  void pack() => print("Packing pizza in the official box of our Pizza chain");
 }
