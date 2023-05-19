@@ -9,7 +9,7 @@ abstract class Pizzeria {
 
     pizza.prepare();
     pizza.bake();
-    pizza.cut();
+    pizza.slice();
     pizza.pack();
 
     return pizza;
