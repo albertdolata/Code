@@ -1,4 +1,6 @@
 import 'Pizzeria.dart';
+import 'Pizza.dart';
+import 'AmericanCheesePizza.dart';
 
 class AmericanPizzeria extends Pizzeria {
   @override
