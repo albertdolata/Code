@@ -1,3 +1,3 @@
 abstract class Vegetables {
-  toString();
+  String toString();
 }

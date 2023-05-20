@@ -1,3 +1,3 @@
 abstract class Sauce {
-  toString();
+  String toString();
 }

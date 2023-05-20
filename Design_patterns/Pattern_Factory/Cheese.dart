@@ -1,3 +1,3 @@
 abstract class Cheese {
-  toString();
+  String toString();
 }

@@ -1,3 +1,3 @@
 abstract class Dough {
-  toString();
+  String toString();
 }
