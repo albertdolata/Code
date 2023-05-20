@@ -1,18 +1,14 @@
-class Pizza {
-  String name = "";
-  String dough = "";
-  String sauce = "";
-  List<String> toppings = [];
+import 'Dough.dart';
+import 'Sauce.dart';
+import 'Vegetables.dart';
 
-  void prepare() {
-    print("Prepare: " + name);
-    print("Kneading the dough...");
-    print("Adding sauce...");
-    print("Toppings: ");
-    for (int i = 0; i < toppings.length; i++) {
-      print(" " + toppings[i]);
-    }
-  }
+abstract class Pizza {
+  String name;
+  Dough dough;
+  Sauce sauce;
+  List<Vegetables> vegetables = [];
+
+  void prepare();
 
   void bake() => print("Baking: 25 minutes at 350 Celsius degree");
 
@@ -20,5 +16,11 @@ class Pizza {
 
   void pack() => print("Packing pizza in the official box of our Pizza chain");
 
+  void setName(String name) => this.name = name;
+
   String getName() => name;
+
+  String toString(){
+    //TODO: show information about pizza
+  }
 }
