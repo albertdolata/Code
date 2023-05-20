@@ -7,7 +7,7 @@ void main() {
   Pizzeria italian = ItalianPizzeria();
   Pizzeria american = AmericanPizzeria();
 
-  Pizza pizza = italian.orderPizza("cheese");
+  Pizza pizza = italian.orderPizza("vegetarian");
   print("Eryk ordered: " + pizza.getName());
 
   pizza = american.orderPizza("cheese");

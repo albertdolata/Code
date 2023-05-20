@@ -2,7 +2,7 @@ import 'Pizza.dart';
 
 class AmericanSeafoodPizza extends Pizza {
   AmericanSeafoodPizza() {
-    name = "American Cheese Pizza";
+    name = "American Seafood Pizza";
     dough = "Extra thick, crispy dough";
     sauce = "Plum tomato sauce";
 
