@@ -12,7 +12,7 @@ abstract class PizzaIngredientsFactory {
 
   Cheese createCheese();
 
-  Vegetables createVegetables();
+  List<Vegetables> createVegetables();
 
   Pepperoni createPepperoni();
 
