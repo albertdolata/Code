@@ -1,7 +1,7 @@
 class Node {
   dynamic data;
-  dynamic previous;
-  dynamic next;
+  Node? next;
 
-  dynamic showData() => data;
+  Node(this.data);
+
 }
