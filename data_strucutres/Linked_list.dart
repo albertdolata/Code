@@ -1,8 +1,7 @@
 import 'Node.dart';
 
 class LinkedList {
-  dynamic data;
-  dynamic head;
+  dynamic head = null;
   dynamic tail;
   dynamic pointer;
 }
