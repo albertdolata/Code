@@ -12,4 +12,5 @@ void main() {
   linkedList.printLinkedList();
 
   linkedList.searchData(0);
+  linkedList.searchPreviousData(45);
 }
