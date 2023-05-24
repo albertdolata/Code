@@ -10,7 +10,7 @@ class LinkedList {
   void insertNewData(dynamic newData) {
     if (head == null) {
       initializeHead(newData);
-    }else {
+    } else {
       Node newNode = Node(newData);
       Node? last = head;
       while (last?.next != null) {
@@ -22,17 +22,16 @@ class LinkedList {
 
   Node? searchData(dynamic target) {
     Node? current = head;
-    while (current?.next != null){
-     if(current?.data == target){
-       print("Data found");
-       return current;
-     }else {
-       current = current?.next;
-     }
+    Node? found;
+    while (current != null) {
+      if (current.data == target) {
+        found = current;
+        break;
+      } else {
+        current = current.next;
+      }
     }
-    print("Data not found");
-    current = null;
-    return current;
+    return found;
   }
 
   Node? searchPreviousData(dynamic target){
