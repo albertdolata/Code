@@ -1,6 +1,7 @@
 import 'Node.dart';
 
 class LinkedList {
+  Node? head;
 
   void initializeLinkedList(dynamic data){
     Node headNode = Node(data);
