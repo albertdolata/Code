@@ -10,4 +10,6 @@ void main() {
   linkedList.insertNewData(23);
 
   linkedList.printLinkedList();
+
+  linkedList.searchData(0);
 }
