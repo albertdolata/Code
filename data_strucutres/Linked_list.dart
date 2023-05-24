@@ -35,6 +35,20 @@ class LinkedList {
     return current;
   }
 
+  Node? searchPreviousData(dynamic target){
+    Node? current = searchData(target);
+    Node? previous = head;
+    while(previous != current){
+      if(previous?.next == current){
+        print(previous?.data);
+        return previous;
+      }else {
+        previous = previous?.next;
+      }
+    }
+    return null;
+  }
+
   void printLinkedList() {
     Node? printNode = head;
     while (printNode != null) {
