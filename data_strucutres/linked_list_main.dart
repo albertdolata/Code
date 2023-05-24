@@ -9,8 +9,11 @@ void main() {
   linkedList.insertNewData(45);
   linkedList.insertNewData(23);
 
-  linkedList.printLinkedList();
+  // linkedList.printLinkedList();
 
-  linkedList.searchData(0);
-  linkedList.searchPreviousData(45);
+  // linkedList.searchData(23);
+  //  linkedList.searchPreviousData(45);
+  linkedList.deleteData(8);
+
+  linkedList.printLinkedList();
 }
