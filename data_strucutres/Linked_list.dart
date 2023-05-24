@@ -20,6 +20,21 @@ class LinkedList {
     }
   }
 
+  void searchData(dynamic target) {
+    Node? current = head;
+    while (current?.next != null){
+     if(current?.data == target){
+       print("Found data: ");
+       return print(current?.data);
+     }else {
+       current = current?.next;
+     }
+    }
+    if(current?.next == null){
+      print('Data not found');
+    }
+  }
+
   void printLinkedList() {
     Node? printNode = head;
     while (printNode != null) {
