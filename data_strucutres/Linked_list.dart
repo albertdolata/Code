@@ -7,9 +7,16 @@ class LinkedList {
     head = Node(data);
   }
 
-  void insertData(Node previousNode, dynamic data) {
-    if(previousNode == null) {
-      initializeLinkedList(data);
+  void insertNewData(dynamic newData) {
+    if (head == null) {
+      initializeHead(newData);
+    }else {
+      Node newNode = Node(newData);
+      Node? last = head;
+      while (last?.next != null) {
+        last = last?.next;
+      }
+      last?.next = newNode;
     }
   }
 }
