@@ -47,6 +47,19 @@ class LinkedList {
     return null;
   }
 
+  void deleteData(dynamic target) {
+    Node? current = searchData(target);
+    Node? previous = searchPreviousData(target);
+    if (head?.data == target) {
+      head = head?.next;
+    } else if (current?.next == null) {
+      previous?.next = null;
+    } else {
+      previous?.next = current?.next;
+      current?.next = null;
+    }
+  }
+
   void printLinkedList() {
     Node? printNode = head;
     while (printNode != null) {
