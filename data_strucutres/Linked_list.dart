@@ -19,4 +19,12 @@ class LinkedList {
       last?.next = newNode;
     }
   }
+
+  void printLinkedList() {
+    Node? printNode = head;
+    while (printNode != null) {
+      print(printNode.data);
+      printNode = printNode.next;
+    }
+  }
 }
