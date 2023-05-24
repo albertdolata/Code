@@ -34,14 +34,13 @@ class LinkedList {
     return found;
   }
 
-  Node? searchPreviousData(dynamic target){
+  Node? searchPreviousData(dynamic target) {
     Node? current = searchData(target);
     Node? previous = head;
-    while(previous != current){
-      if(previous?.next == current){
-        print(previous?.data);
+    while (previous != current) {
+      if (previous?.next == current) {
         return previous;
-      }else {
+      } else {
         previous = previous?.next;
       }
     }
