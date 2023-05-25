@@ -5,7 +5,8 @@ class Stack {
 
   void push(dynamic data) {
     if (head == null) {
-      head?.data = data;
+      Node headNode = Node(data);
+      head= headNode;
     } else {
       Node? newNode = Node(data);
       Node? lastNode = head;
