@@ -15,4 +15,19 @@ class Stack {
       lastNode?.next = newNode;
     }
   }
+
+  Node? pop() {
+    Node? currentNode = head;
+    Node? lastNode;
+    Node? beforeLastNode = head;
+    while (currentNode?.next != null) {
+      currentNode = currentNode?.next;
+    }
+    lastNode = currentNode;
+    while (beforeLastNode?.next != lastNode) {
+      beforeLastNode = beforeLastNode?.next;
+    }
+    beforeLastNode?.next = null;
+    return lastNode?.data;
+  }
 }
