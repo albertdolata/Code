@@ -17,18 +17,24 @@ class Stack {
     }
   }
 
-  Node? pop() {
+  dynamic pop() {
     Node? currentNode = head;
     Node? lastNode;
     Node? beforeLastNode = head;
-    while (currentNode?.next != null) {
-      currentNode = currentNode?.next;
+    if(head?.next == null) {
+      lastNode = head;
+      head = null;
+      return lastNode?.data;
+    } else {
+      while (currentNode?.next != null) {
+        currentNode = currentNode?.next;
+      }
+      lastNode = currentNode;
+      while (beforeLastNode?.next != lastNode) {
+        beforeLastNode = beforeLastNode?.next;
+      }
+      beforeLastNode?.next = null;
+      return lastNode?.data;
     }
-    lastNode = currentNode;
-    while (beforeLastNode?.next != lastNode) {
-      beforeLastNode = beforeLastNode?.next;
-    }
-    beforeLastNode?.next = null;
-    return lastNode?.data;
   }
 }
