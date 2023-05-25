@@ -5,13 +5,12 @@ class Stack {
 
   void push(dynamic data) {
     if (head == null) {
-      Node headNode = Node(data);
-      head= headNode;
+      head= Node(data);
     } else {
       Node? newNode = Node(data);
       Node? lastNode = head;
-      while (lastNode != null) {
-        lastNode = lastNode.next;
+      while (lastNode?.next != null) {
+        lastNode = lastNode?.next;
       }
       lastNode?.next = newNode;
     }
