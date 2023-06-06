@@ -4,10 +4,10 @@ class HashTable {
   List<dynamic> table = List.filled(20, null, growable: false);
   int index = 0;
 
-  int hashIndex(Data data) => data.key % table.length;
+  int hashIndex(int key) => key % table.length;
 
   void insert (Data data) {
-    index = hashIndex(data);
+    index = hashIndex(data.key);
     if(table[index] == null){
       table[index] = data.data;
     } else {
