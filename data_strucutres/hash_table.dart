@@ -6,14 +6,14 @@ class HashTable {
 
   int hashIndex(int key) => key % table.length;
 
-  void insert (Data data) {
+  void insert(Data data) {
     index = hashIndex(data.key);
-    if(table[index] == null){
+    if (table[index] == null) {
       table[index] = data;
     } else {
-      while (table[index] != null){
+      while (table[index] != null) {
         index++;
-        if(index > table.length) {
+        if (index > table.length) {
           index = 0;
         }
       }
