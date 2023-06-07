@@ -18,4 +18,9 @@ void main() {
   hashTable.insert(favouriteNumber);
   hashTable.insert(fruit);
   hashTable.insert(serialNumber);
+
+  hashTable.search(50);
+  hashTable.search(30);
+  hashTable.search(1);
+  hashTable.search(998);
 }
