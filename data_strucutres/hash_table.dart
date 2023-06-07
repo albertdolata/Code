@@ -22,4 +22,24 @@ class HashTable {
     print("Data inserted at $index index of the list");
   }
 
+  dynamic search(int key) {
+    index = hashIndex(key);
+    Data? currentData = table[index];
+    if (currentData?.key == key) {
+      print(currentData?.data);
+      return currentData?.data;
+    } else {
+      while (currentData?.key != key) {
+        if (index > 20) {
+          index = 0;
+          currentData = table[index];
+        } else {
+          index++;
+          currentData = table[index];
+        }
+      }
+      print(currentData?.data);
+      return currentData?.data;
+    }
+  }
 }
