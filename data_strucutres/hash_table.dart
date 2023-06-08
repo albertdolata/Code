@@ -26,7 +26,6 @@ class HashTable {
     index = hashIndex(key);
     Data? currentData = table[index];
     if (currentData?.key == key) {
-      print(currentData?.data);
       return currentData;
     } else {
       while (currentData?.key != key) {
@@ -38,7 +37,6 @@ class HashTable {
           currentData = table[index];
         }
       }
-      print(currentData?.data);
       return currentData;
     }
   }
