@@ -40,4 +40,10 @@ class HashTable {
       return currentData;
     }
   }
+
+  void deleteData(int key) {
+    index = table.indexOf(search(key));
+    table[index] = null;
+    print("Data at $index deleted");
+  }
 }
