@@ -23,4 +23,10 @@ void main() {
   hashTable.search(30);
   hashTable.search(1);
   hashTable.search(998);
+
+
+  hashTable.deleteData(50);
+  hashTable.deleteData(30);
+  hashTable.deleteData(1);
+  hashTable.deleteData(998);
 }
