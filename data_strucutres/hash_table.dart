@@ -22,12 +22,12 @@ class HashTable {
     print("Data inserted at $index index of the list");
   }
 
-  dynamic search(int key) {
+  Data? search(int key) {
     index = hashIndex(key);
     Data? currentData = table[index];
     if (currentData?.key == key) {
       print(currentData?.data);
-      return currentData?.data;
+      return currentData;
     } else {
       while (currentData?.key != key) {
         if (index > 20) {
@@ -39,7 +39,7 @@ class HashTable {
         }
       }
       print(currentData?.data);
-      return currentData?.data;
+      return currentData;
     }
   }
 }
