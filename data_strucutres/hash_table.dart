@@ -29,7 +29,7 @@ class HashTable {
       return currentData;
     } else {
       while (currentData?.key != key) {
-        if (index > 20) {
+        if (index > table.length) {
           index = 0;
           currentData = table[index];
         } else {
