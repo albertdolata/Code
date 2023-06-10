@@ -3,31 +3,39 @@ import 'TreeNode.dart';
 class Tree {
   TreeNode? root;
 
-  void insertData(int data) {
-    if (root == null) {
+  void initializeTree(int data) {
       root = TreeNode(data);
+  }
+
+  void insertNextData(int data, TreeNode lastNode) {
+    if (lastNode.left == null) {
+      lastNode.left = TreeNode(data);
+    } else if (lastNode.right == null) {
+      lastNode.right = TreeNode(data);
+    } else if (lastNode.left!.left == null || lastNode.left!.right == null) {
+      insertNextData(data, lastNode.left!);
+    } else {
+      insertNextData(data, lastNode.right!);
+    }
+  }
+
+  void insertLeft(int data) {
+    if (root?.left == null) {
+      root?.left = TreeNode(data);
     } else {
       TreeNode newNode = TreeNode(data);
-      TreeNode? lastNode = root;
-      TreeNode? previousLastNode;
-      TreeNode? tempNode;
-      while (lastNode?.left != null && lastNode?.right != null) {
-          if (lastNode?.left?.left == null || lastNode?.left?.right == null) {
-            previousLastNode = lastNode;
-            lastNode = lastNode?.left;
-          } else if (previousLastNode?.right?.left == null || previousLastNode?.right?.right == null){
-            tempNode = lastNode;
-            lastNode = previousLastNode?.right;
-            previousLastNode = tempNode;
-          } else {
-            lastNode = previousLastNode?.left;
-          }
-      }
-      if (lastNode?.left == null) {
-        lastNode?.left = newNode;
-      } else {
-        lastNode?.right = newNode;
-      }
+      newNode.left = root?.left;
+      root?.left = newNode;
+    }
+  }
+
+  void insertRight(int data) {
+    if (root?.right == null) {
+      root?.right = TreeNode(data);
+    } else {
+      TreeNode newNode = TreeNode(data);
+      newNode.right = root?.right;
+      root?.right = newNode;
     }
   }
 }

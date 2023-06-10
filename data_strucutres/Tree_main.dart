@@ -2,13 +2,17 @@ import 'Tree.dart';
 
 void main() {
   Tree tree = Tree();
-  tree.insertData(1);
-  tree.insertData(2);
-  tree.insertData(3);
-  tree.insertData(4);
-  tree.insertData(5);
-  tree.insertData(6);
-  tree.insertData(7);
-  tree.insertData(8);
-  tree.insertData(9);
+  tree.initializeTree(0);
+  tree.insertLeft(1);
+  tree.insertRight(2);
+  tree.insertLeft(3);
+  tree.insertRight(4);
+  tree.insertLeft(5);
+  tree.insertRight(6);
+  tree.insertLeft(7);
+  tree.insertRight(8);
+  tree.insertLeft(9);
+  tree.insertRight(10);
+  tree.insertLeft(11);
+  tree.insertRight(12);
 }
