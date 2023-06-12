@@ -49,14 +49,17 @@ class LinkedList {
 
   void deleteData(dynamic target) {
     Node? current = searchData(target);
+    if (current == null) {
+      return print('Data not found.');
+    }
     Node? previous = searchPreviousData(target);
     if (head?.data == target) {
       head = head?.next;
-    } else if (current?.next == null) {
+    } else if (current.next == null) {
       previous?.next = null;
     } else {
-      previous?.next = current?.next;
-      current?.next = null;
+      previous?.next = current.next;
+      current.next = null;
     }
   }
 
