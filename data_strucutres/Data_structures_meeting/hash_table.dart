@@ -13,23 +13,22 @@ class HashTable {
     if (list[index] == null) {
       list[index] = data;
     } else {
-      while (list[index] != null){
-        index ++;
+      while (list[index] != null) {
+        index++;
+        if (index > 20) {
+          index = 0;
+        }
       }
-      if (index > 20) {
-        index = 0;
-      } else if (list[index] == null ){
-        list[index] = data;
-      }
+      list[index] = data;
     }
     print("Added data ${list[index]?.data} at $index index");
   }
 
   HashData? searchData(int key) {
     int index = _hash(key);
-    if(list[index]?.key == key){
+    if (list[index]?.key == key) {
       return list[index];
-    }else {
+    } else {
       index = 0;
       while (list[index]?.key != key) {
         index++;
@@ -39,8 +38,7 @@ class HashTable {
   }
 
   void deleteData(int key) {
-    HashData? target = searchData(key);
-    int index = list.indexOf(target);
+    int index = list.indexOf(searchData(key));
     list[index] = null;
     print("Data at index $index deleted");
   }
