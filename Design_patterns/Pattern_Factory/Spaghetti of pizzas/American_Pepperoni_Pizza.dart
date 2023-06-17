@@ -15,4 +15,7 @@ class AmericanPepperoniPizza extends Pizza {
 
   @override
   void slice() => print("Slicing pizza into squared pieces");
+
+  @override
+  void prepare() => "Preparing American Pepperoni Pizza";
 }

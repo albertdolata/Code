@@ -1,12 +1,19 @@
+import 'Cheese.dart';
+import 'Clams.dart';
 import 'Dough.dart';
+import 'Pepperoni.dart';
 import 'Sauce.dart';
 import 'Vegetables.dart';
 
 abstract class Pizza {
-  String name;
-  Dough dough;
-  Sauce sauce;
+  String? name;
+  Dough? dough;
+  Sauce? sauce;
   List<Vegetables> vegetables = [];
+  Cheese? cheese;
+  Pepperoni? pepperoni;
+  Clams? clams;
+
 
   void prepare();
 
@@ -18,9 +25,8 @@ abstract class Pizza {
 
   void setName(String name) => this.name = name;
 
-  String getName() => name;
+  String? getName() => name;
 
-  String toString(){
-    //TODO: show information about pizza
-  }
+  @override
+   String toString() => "$name on a $dough dough with: $";
 }
