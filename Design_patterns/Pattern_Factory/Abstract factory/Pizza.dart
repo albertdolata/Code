@@ -16,7 +16,9 @@ abstract class Pizza {
 
   String? getName() => name;
 
-  void setName(String name) => this.name;
+  void setName(String name) {
+    this.name = name;
+  }
 
   void prepare();
 
