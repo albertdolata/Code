@@ -1,15 +1,24 @@
 import 'Cheese.dart';
 import 'Clams.dart';
 import 'Dough.dart';
+import 'FreshClams.dart';
+import 'Garlic.dart';
+import 'MarinaraSauce.dart';
+import 'Mushrooms.dart';
+import 'Onion.dart';
 import 'Pepperoni.dart';
 import 'PizzaIngredientFactory.dart';
+import 'RedPepper.dart';
+import 'ReggioCheese.dart';
 import 'Sauce.dart';
+import 'SlicedPepperoni.dart';
+import 'ThinCrustyDough.dart';
 import 'Vegetables.dart';
 
 class ItalianPizzaIngredientFactory extends PizzaIngredientFactory {
   @override
   Dough createDough() {
-    return ThinCrustyDough;
+    return ThinCrustyDough();
   }
 
   @override
@@ -24,12 +33,12 @@ class ItalianPizzaIngredientFactory extends PizzaIngredientFactory {
 
   @override
   Pepperoni createPepperoni() {
-    return PepperoniSlices();
+    return SlicedPepperoni();
   }
 
   @override
   Sauce createSauce() {
-    return MarianaSauce();
+    return MarinaraSauce();
   }
 
   @override
