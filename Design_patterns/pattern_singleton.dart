@@ -16,11 +16,20 @@ class Singleton {
 class ChocolateCauldron {
   late bool _empty;
   late bool _boiled;
+  static ChocolateCauldron? _chocolateCauldron;
 
-  ChocolateCauldron() {
+  _ChocolateCauldron() {
     _empty = true;
     _boiled = false;
   }
+
+  static ChocolateCauldron? _getChocolateCauldron() {
+    if (_chocolateCauldron == null) {
+      _chocolateCauldron = ChocolateCauldron();
+    }
+    return _chocolateCauldron;
+  }
+
   void fillUp() {
     if (isEmpty()) {
       _empty = false;
