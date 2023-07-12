@@ -12,3 +12,31 @@ class Singleton {
   }
   //can add here useful methods
 }
+
+class ChocolateCauldron {
+  late bool _empty;
+  late bool _boiled;
+
+  ChocolateCauldron() {
+    _empty = true;
+    _boiled = false;
+  }
+  void fillUp() {
+    if (isEmpty()) {
+      _empty = false;
+      _boiled = false;
+      //fill up cauldron with mix of milk and chocolate
+    }
+  }
+
+  void clear() {
+    if(!isEmpty() && isBoiled()) {
+      // clear the cauldron of the boiled milk and chocolate mix
+      _empty = true;
+    }
+  }
+
+  bool isEmpty() => _empty;
+
+  bool isBoiled() => _boiled;
+}
