@@ -1,23 +1,25 @@
-# My Programming Journey - Dart Basics & Git Workflow
+# #100DaysOfCode Challenge - Learning Dart
 
-This repository represents my very first steps in the world of software development. I created this space to learn the fundamentals of programming from scratch, using the **Dart language** as my starting point.
+This repository documents my very first steps in software development, built during the **#100DaysOfCode challenge**. I used this space to learn the fundamentals of programming from scratch.
 
-## Learning Objectives
 
-### 1. Version Control with Git
-Beyond writing code, this repository served as my training ground for professional developer tools.
-* **Commit History**: I practiced the habit of regular committing to document my progress and understand how version control works.
-* **Workflow**: I learned how to manage files, handle basic Git operations, and maintain a structured repository.
 
-### 2. Programming Fundamentals
-I solved numerous tasks and exercises to master the core logic of programming.
-* **Basics**: Implementation of variables, operators, and standard input/output operations.
-* **Problem Solving**: Exercises involving string manipulation (e.g., reversing words), working with objects, and basic conditional logic.
+## Learning Goals & Consistency
 
-### 3. Transition to Advanced Concepts
-As I grew more comfortable with the basics, I moved on to more complex Computer Science topics:
-* **Data Structures**: I manually implemented linked lists, stacks, queues, and hash tables to understand how data is organized in memory.
-* **Design Patterns**: I explored software architecture by implementing patterns like **Singleton**, **Decorator**, and **Factory**.
+### 1. Version Control & Git Discipline
+The primary focus of this challenge was to master professional developer tools through daily practice.
+* **Daily Commits**: I focused on making regular commits to document my progress and learn the nuances of Git version control.
+* **Transparent Workflow**: By participating in the challenge, I learned how to structure a repository and maintain a clear history of changes.
+
+### 2. From Syntax to Logic (Dart)
+I started with zero programming knowledge and progressively tackled more complex problems.
+* **The Basics**: Mastering variables, operators, and I/O operations through small daily tasks.
+* **Problem Solving**: Solving exercises like string manipulation (e.g., word reversal) and logical tasks to build algorithmic thinking.
+
+### 3. Advanced Concepts
+As the challenge progressed, I moved from basic scripts to implementing advanced Computer Science concepts:
+* **Data Structures**: Manual implementation of Linked Lists, Stacks, Queues, and Hash Tables to understand memory organization.
+* **Design Patterns**: Practical exercises in software architecture, including **Singleton**, **Decorator**, and **Factory** patterns.
 
 ---
 *Note: This repository is a reflective journal of my learning process, moving from basic syntax to structured software design.*
